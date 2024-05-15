@@ -16,7 +16,7 @@ class Cache:
 
     def store(self, data: Any) -> str:
         """sets a key/value pair in redis and returns the key"""
-        key = str(Use uuid.uuid4())
+        key = str(uuid.uuid4())
         self._redis.set(key, data)
 
         return key
